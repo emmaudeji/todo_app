@@ -12,9 +12,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(
-  "mongodb+srv://gogrene:cat89boy@cluster0.u2pisyg.mongodb.net/todoList"
-);
+mongoose.connect(process.env.DATABASE_URL + "/todoList");
 
 // "mongodb+srv://gogrene:cat89boy@cluster0.u2pisyg.mongodb.net";
 
